@@ -56,7 +56,7 @@ m  -- >
 
     CBOW :
 
-![a](cbow.jpg)
+![Alt text](images/cbow.jpg)
 
     P(Wt | Wc)
 

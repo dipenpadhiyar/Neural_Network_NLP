@@ -48,3 +48,8 @@ In this approach, the meaning of the sentence "Jon loves ice-cream" would be cap
 | Use Cases              | Precise reasoning, logical inference, semantic rule-based tasks | Word similarity, document retrieval, data-driven tasks |
 | Challenges             | Requires explicit linguistic knowledge, syntactic structure, and semantic rules | May struggle with capturing rare words and may not handle word polysemy well |
 | Modern NLP            | Often used in conjunction with distributional semantics in hybrid approaches | Frequently used in conjunction with compositional semantics to leverage both approaches |
+
+
+![vector_representatin](images/word_vector.PNG)
+
+![Alt text](images/word_similarity.PNG)

@@ -13,6 +13,9 @@ NLU (Natural Language Understanding): Whole processes such as decisions and acti
 
 > ## Natural Language vs Formal Language
 
+>Natural languages are the languages people speak,<br> such as English, Spanish, and French. They were not designed by people (although people try to impose some order on them); they evolved naturally.<br><br>
+Formal languages are languages that are designed by people for specific applications.<br> For example, the notation that mathematicians use is a formal language that is particularly good at denoting relationships among numbers and symbols. Chemists use a formal language to represent the chemical structure of molecules. And most importantly:
+
 | Aspect                 | Natural Language        | Formal Language         |
 |------------------------|-------------------------|--------------------------|
 | Definition             | Language spoken and written by humans in everyday communication | Language with precise syntax and semantics used in technical fields such as mathematics, logic, and computer science |
@@ -23,3 +26,25 @@ NLU (Natural Language Understanding): Whole processes such as decisions and acti
 | Role in NLP            | The subject of analysis and generation in NLP tasks | Used to create models, rules, and tools for processing natural language |
 | Use Cases              | Understand and generate human language | Define syntax, constraints, and processing rules for NLP systems |
 | Examples in NLP        | Sentiment analysis of customer reviews, machine translation of news articles | Defining grammars for parsing sentences, writing regular expressions for text extraction |
+
+> ## Compositional Semantics vs Distributional Semantics
+
+> **Compositional semantics** would involve breaking down the sentence into its constituent parts and deriving the meaning through structured representation and logical rules.<br><br>johan love ice-cream. <br>
+In this case, we could break the sentence down into "Jon" (a proper noun), "loves" (a verb), and "ice-cream" (a noun). We would then apply semantic rules to combine these components.
+The compositional approach would represent the sentence's meaning as something like "Love(Jon, ice-cream)," indicating that Jon has a positive sentiment towards ice-cream.
+
+> **Distributional semantics** relies on word embeddings and the distribution of words in a corpus. It would represent the sentence by considering the contexts in which words appear.<br><br>
+In a distributional model like Word2Vec or GloVe, the words "Jon," "loves," and "ice-cream" would each have vector representations based on their co-occurrence patterns with other words.<br><br>
+The model might learn that "loves" and "ice-cream" tend to co-occur in similar contexts, indicating a semantic relationship. Therefore, they might have vectors that are close together in the vector space, while "Jon" would have its own vector representation.<br><br>
+In this approach, the meaning of the sentence "Jon loves ice-cream" would be captured as the similarity or closeness in vector space between the vectors for "loves" and "ice-cream."
+<br><br>
+
+| Aspect                 | Compositional Semantics        | Distributional Semantics         |
+|------------------------|-------------------------|--------------------------|
+| Definition             | Derives meaning by composing the meanings of individual components (words or phrases) | Derives meaning from the distribution of words in a large corpus of text |
+| Approach               | Relies on formal logic, predicate calculus, and structured representations | Utilizes vector space models, word embeddings, and machine learning techniques |
+| Representation         | Typically uses structured representations and explicit semantic rules | Represents words and phrases as high-dimensional vectors based on co-occurrence |
+| Example                | Deriving sentence meaning from the meanings of its words | Creating word embeddings (Word2Vec, GloVe) to capture semantic relationships |
+| Use Cases              | Precise reasoning, logical inference, semantic rule-based tasks | Word similarity, document retrieval, data-driven tasks |
+| Challenges             | Requires explicit linguistic knowledge, syntactic structure, and semantic rules | May struggle with capturing rare words and may not handle word polysemy well |
+| Modern NLP            | Often used in conjunction with distributional semantics in hybrid approaches | Frequently used in conjunction with compositional semantics to leverage both approaches |

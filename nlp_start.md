@@ -53,3 +53,45 @@ In this approach, the meaning of the sentence "Jon loves ice-cream" would be cap
 ![vector_representatin](images/word_vector.PNG)
 
 ![Alt text](images/word_similarity.PNG)
+
+![Alt text](images/Dataset.PNG)
+
+![Alt text](images/stap_constructing_word_space.PNG)
+
+![Alt text](images/result_word_space.PNG)
+
+
+> # Polysemy VS Homonymy
+| Aspect           | Polysemy                           | Homonymy                          |
+|------------------|-----------------------------------|----------------------------------|
+| Definition       | Multiple related meanings for a single word | Different words with the same form (spelling/pronunciation) but unrelated meanings |
+| Semantic Relationship | The meanings are typically related by a common underlying concept | No inherent semantic relationship; distinct words that coincidentally share the same form |
+| Examples         | - "Bank" can mean a financial institution or the side of a river. Both relate to the idea of a place where something is stored.<br>- "Mouse" can refer to a small rodent or a computer input device. Both relate to the idea of something small that is manipulated or controlled. | - "Bark" can mean the sound a dog makes (verb) or the outer covering of a tree (noun). These two meanings have no semantic connection.<br>- "Bat" can refer to a flying mammal or a piece of sports equipment used in baseball. These meanings are unrelated. |
+| Context          | The specific meaning is often determined by context, making it context-dependent. | Context or additional information may be required to disambiguate the intended meaning. Without context, it can be challenging to determine the correct interpretation. |
+
+
+
+> # TF-IDF
+
+In the context of TF-IDF (Term Frequency-Inverse Document Frequency), information context is not explicitly computed, but it is indirectly taken into account when calculating the TF-IDF scores for words in a document corpus. 
+
+TF-IDF is a numerical statistic used in information retrieval and text mining to represent the importance of a word within a collection of documents. It considers the local and global context of words. Here's how information context is indirectly incorporated into TF-IDF:
+
+1. **Term Frequency (TF)**
+   - The term frequency component (TF) measures how frequently a term (word) appears in a specific document. 
+   - This is the local context of the word within a particular document.
+   - It is calculated as the number of times a term appears in a document divided by the total number of terms in that document.
+   - It represents the relevance of the term to the specific document.
+
+2. **Inverse Document Frequency (IDF)**
+   - The inverse document frequency component (IDF) takes into account the global context. 
+   - It measures how unique or common a term is across the entire document corpus.
+   - Words that appear in many documents are considered less important than words that appear in a smaller subset of documents.
+   - IDF is calculated as the logarithm of the total number of documents divided by the number of documents containing the term.
+
+3. **TF-IDF Score**
+   - The TF-IDF score is computed by multiplying the TF and IDF components.
+   - This score reflects both the local context of the term within the document and its global context within the entire corpus.
+   - Words with high TF-IDF scores are those that are important and unique within the context of a specific document and across the entire corpus.
+
+In this way, TF-IDF indirectly takes information context into account by weighting words based on their frequency within the document and their uniqueness or significance across the entire corpus. This allows TF-IDF to identify and prioritize words that are contextually relevant and important for a specific document while considering their importance in the broader context of the corpus.
